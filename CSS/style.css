@@ -12,6 +12,12 @@ body {
   color: #fff;
 }
 
+main nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
 header {
   font-family: 'Yeseva One', cursive;
   display: flex;
@@ -20,6 +26,7 @@ header {
   background-color: #041821;
   color: #fff;
 }
+
 main {
   width: 90%;
   margin: auto;
@@ -31,10 +38,94 @@ main {
   max-width: 1200px;
 }
 
+.photo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.4em;
+}
+
+.photo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  letter-spacing: 0.25em;
+  font-weight: lighter;
+  font-size: 0.5em;
+  padding: 0.5em;
+}
+
+.photo img:nth-child(n + 10) {
+  display: 10;
+}
+
 footer {
   text-align: center;
   margin-top: 4em;
   color: var(--secondary);
   font-weight: 100;
   opacity: 0.5;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  main h2,
+  main p {
+    width: 60%;
+  }
+
+  main nav button {
+    font-size: 1em;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+
+  main {
+    width: 80%;
+    margin: auto;
+  }
+
+  main h2 {
+    font-size: 3.5em;
+  }
+
+  main nav {
+    justify-content: center;
+    gap: 1em;
+  }
+
+  main nav button {
+    font-size: 0.75em;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid img:nth-child(n + 10) {
+    display: block;
+  }
+
+  main p {
+    width: 90%;
+  }
 }
