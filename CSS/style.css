@@ -2,12 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,300&display=swap');
 
 body {
-  font-family: "Montserrat ", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-left: auto;
-  margin-right: auto;
-  width: 120em;
+
   background-color: #041821;
   color: #fff;
 }
@@ -18,6 +13,14 @@ main nav {
   margin-bottom: 2em;
 }
 
+header p {
+  font-size: 1.5em;
+}
+
+main h2 {
+  font-family: 'Yeseva One', cursive;
+}
+
 header {
   font-family: 'Yeseva One', cursive;
   display: flex;
@@ -25,12 +28,23 @@ header {
   padding: 1.5em 0;
   background-color: #041821;
   color: #fff;
+  border-bottom: 1em solid;
+  border-width: 0.05em;
 }
 
 main {
   width: 90%;
   margin: auto;
   padding-top: 3em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header nav i {
+  margin: 1em 0.5em;
+}
+
+header nav a {
+  color: #fff;
 }
 
 .gallery {
@@ -55,6 +69,8 @@ button {
   font-weight: lighter;
   font-size: 0.5em;
   padding: 0.5em;
+  background: none;
+  color: #fff;
 }
 
 .photo img:nth-child(n + 10) {
@@ -64,9 +80,10 @@ button {
 footer {
   text-align: center;
   margin-top: 4em;
-  color: var(--secondary);
+  color:#fff;
   font-weight: 100;
   opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
 }
 
 * {
@@ -74,22 +91,6 @@ footer {
   box-sizing: border-box;
 }
 
-
-@media screen and (min-width: 1024px) {
-
-  main h2,
-  main p {
-    width: 60%;
-  }
-
-  main nav button {
-    font-size: 1em;
-  }
-
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 @media screen and (min-width: 768px) {
   header {
@@ -105,7 +106,7 @@ footer {
   }
 
   main h2 {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 
   main nav {
@@ -126,6 +127,22 @@ footer {
   }
 
   main p {
-    width: 90%;
+    width: 80%;
+  }
+}
+/* Format ordinateur */
+@media screen and (min-width: 1024px) {
+
+  main h2,
+  main p {
+    width: 60%;
+  }
+
+  main nav button {
+    font-size: 1em;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
